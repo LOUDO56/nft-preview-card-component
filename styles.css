@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    transition: 0.2s;
+}
+
+a:hover{
+    color:hsl(178, 100%, 50%);
+}
+
+hr{
+    color: hsl(215, 32%, 27%);
+}
+
+body{
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+
+.nft-card{
+    background-color: hsl(216, 50%, 16%);
+    padding: 20px 20px 35px 20px;
+    color: hsl(215, 51%, 70%);
+    max-width: 22rem;
+    border-radius: 15px;
+    box-shadow: 0 1.5rem 0 17px rgba(0, 0, 0, 0.11);
+}
+
+.nft-img-container{
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+.hover{
+    position: absolute;
+    background-color: hsl(178, 100%, 50%);
+    width: 100%;
+    height: 99%;
+    border-radius: 10px;
+    top: 0;
+    opacity: 0.5;
+    display: none;
+}
+
+.eye-hover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.nft-img-container:hover .hover{
+    display: block;
+}
+
+.nft-img-container:hover .eye-hover{
+    display: block;
+}
+
+
+.nft-img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+.nft-card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nft-card-title{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.nft-card-sub{
+    line-height: 1.5;
+}
+
+.nft-price-timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nft-price-timer p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+
+.nft-card-price{
+    color: hsl(178, 100%, 50%);
+    font-weight: 700;
+}
+
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.profile-img{
+    max-width: 30px;
+    border: solid 1px hsl(0, 0%, 100%);
+    border-radius: 100%;
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .nft-card{
+        max-width: 20rem;
+    }
+}
